@@ -1,0 +1,25 @@
+# https://codeforces.com/problemset/problem/514/A -  name of problem
+
+# Difficulty: 1200
+
+'''
+Submission	Time	Verdict
+57901070	Jul/28/2019 18:42	Accepted
+57874206	Jul/28/2019 07:08	Wrong answer on test 8
+57873826	Jul/28/2019 06:52	Wrong answer on test 4
+'''
+
+def chewbacca(nn):
+    list1 = [int(i) for i in nn]
+    list2 = [9 - i for i in list1]
+    if list2[0] == 0:
+        list2 = [9] + list2[1:]
+    d = []
+    for i in range(len(list1)):
+        d.append(str(min(list1[i], list2[i])))
+    return "".join(d)
+
+
+if __name__ == "__main__":
+    n = input()
+    print(chewbacca(n))
